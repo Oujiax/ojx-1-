@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    body，html{
+        height: 100%;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
+    .box{
+        width: 640px;
+        height: 400px;
+        position: relative;
+        transform-style: preserve-3d;
+    }
+    .box img{
+        position: absolute;
+        width: 640px;
+        height: 400px;
+        box-shadow: 2px 2px 25px rgba(0,0,0,.5);
+        transition-property: all;
+        transition-duration: 1s;
+        transition-timing-function: ease-in-out;
+        transition-delay: .1s;
+    }
+    /* box里面的第几个 */
+    .box img:nth-child(1){
+        /* 旋转角度   控制图片的上下 */
+        transform: rotate(25deg) translateZ(10px);
+    }
+    .box img:nth-child(2){
+        transform: rotate(-25deg) translateZ(9px);
+    }
+    .box img:hover{
+        transform: scale(1.5) translateZ(130px);
+        z-index: 2;
+        width: 680px;
+        box-shadow: 5px 5px 30px rgba(0,0,0,.5);
+    }
+</style>
+<body>
+    <div class="box">
+        <img src="../image/01.jpg" alt="">
+        <img src="http://pic1.win4000.com/wallpaper/8/5791ecd9db6a9.jpg" alt="">
+    </div>
+</body>
+</html>

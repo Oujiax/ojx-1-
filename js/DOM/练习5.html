@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .box{
+            width: 600px;
+            border: 1px solid #000;
+            margin: 100px auto;
+        }
+        .clearfix::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .bottom{
+            border: 1px solid #000;
+        }
+        .bottom li{
+           float: left;
+           border-right: 1px solid #000;
+           padding: 0 14px;
+        }
+        .bottom #li4{
+            border-right: 0;
+        }
+        .bottom img{
+           width: 120px;
+        }
+        .top{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="top">
+            <img id="bigImg" src="https://i1.mifile.cn/a1/pms_1550642182.7527088!220x220.jpg" alt="">
+        </div>
+        <div class="bottom">
+            <ul class="clearfix">
+            <li id="li1" ><img src="https://i1.mifile.cn/a1/pms_1550642182.7527088!220x220.jpg"></li>
+            <li id="li2" ><img src="https://i1.mifile.cn/a1/pms_1538019009.57772743!220x220.png"></li>
+            <li id="li3" ><img src="https://i1.mifile.cn/a1/pms_1547020852.30751177!220x220.jpg"></li>
+            <li id="li4" ><img src="https://i1.mifile.cn/a1/pms_1545457719.47232999!220x220.png"></li>
+        </ul>
+        </div>
+    </div>
+    <script>
+        var oImg = document.getElementById("bigImg");
+        var oBottom = document.getElementsByClassName("bottom")[0];
+        var aImg = oBottom.getElementsByTagName("img");
+        for(var i=0;i<aImg.length;i++){
+            aImg[i].index = i;
+            aImg[i].onmouseover = function(){
+                var thisSrc = aImg[this.index].getAttribute("src");
+                oImg.setAttribute("src",thisSrc);
+            }
+        }
+    </script>
+</body>
+</html>

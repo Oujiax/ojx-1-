@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery-3.4.1.js"></script>
+    <style>
+        #div1{
+            font-size: 26px;
+        }
+        input{
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">你爱好的运动是？</div>
+    <div id="chance">
+        <input type="checkbox">
+        <div id="div2">足球</div>
+        <input type="checkbox">
+        <div id="div3">篮球</div>
+        <input type="checkbox">
+        <div id="div4">排球</div>
+        <input type="checkbox">
+        <div id="div5">羽毛球</div>
+    </div>
+    <button id="btn1">全选</button>
+    <button id="btn2">全不选</button>
+    <button id="btn3">反选</button>
+</div>
+<script>
+    $("#btn1").on("click",function(){
+      $("input").prop("checked",true)
+    })
+    $("#btn2").on("click",function(){
+      $("input").prop("checked",false)
+    })
+    $("#btn3").on("click",function(){
+      var allCheckbox = $("input:checked")   //除了a的其他都被选中
+      allCheckbox.each(function(index,item){
+        if($(item).prop("checked")){
+            $(item).prop("checked",false)
+        }else{
+            $(item).prop("checked",true)
+        }
+        // item.checked = !item.checked
+      })      
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./jquery-3.4.1.js"></script>
+  <style>
+    div{
+        float: left;
+      }
+    #inp{
+      display: block;
+    }
+    table{
+      border:1px solid black;
+      border-collapse: collapse;
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+    td{
+      border:1px solid black
+    }
+    thead td{
+      font-size: 24px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+    <div id="sort">筛选：</div>
+  <input type="text" id="inp">
+  <table>
+    <thead>
+      <tr>
+        <td>姓名</td>
+        <td>性别</td>
+        <td>居住地</td>
+      </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>李武</td>
+      <td>男</td>
+      <td>北京</td>
+    </tr>
+    <tr>
+      <td>杨艺</td>
+      <td>女</td>
+      <td>天津</td>
+    </tr>
+    <tr>
+      <td>刘维</td>
+      <td>女</td>
+      <td>东京</td>
+    </tr>
+    <tr>
+        <td>杨天</td>
+        <td>男</td>
+        <td>伦敦</td>
+    </tr>
+    <tr>
+        <td>李扬</td>
+        <td>男</td>
+        <td>重庆</td>
+    </tr>
+  </tbody>
+  </table>
+  <script>
+    $("#inp").on('keyup', function () {
+      var thisVal = $(this).val()
+      $("tbody tr").css("display","none")
+      $("tbody tr:contains("+thisVal+")").css("display","block")
+      //$("div:contains(tr[0])").css("display","tr[0]");
+    })
+  </script>
+</body>
+
+</html>

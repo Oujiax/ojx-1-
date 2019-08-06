@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var arr = [1,2,3,4];
+        // var [a,b,c,d] = [1,2,3,4];
+        // console.log(a,b,c,d);
+        // var [a,b,[x,y],d] = [1,2,[3,9],4];
+        // console.log(a,b,[x,y],d);
+
+
+        // var obj = {
+        //     name:"cc",
+        //     age:"12"
+        // }
+        // let{name,age} = obj;
+        // // let{age,name} = obj;  可调换顺序
+        // let{name:a,age:b} = obj;
+        // console.log(a,b);
+        // console.log(name,age);
+
+        // let str = "hello";
+        // // let a = str.charAt(0);  获取当前字符串的指定
+        // let a = str[0];
+        // console.log(a);
+
+        // function foo(a,b,c){
+        //     console.log(a,b,c);            
+        // }
+        // foo(1,2,3);
+        // function foo([a,b,c]){
+        //     console.log(a,b,c);
+            
+            // console.log(arguments);
+            // arguments.callee() == foo()     相当于调用本身       
+        // }
+        // foo(1,2,3);     
+        // function foo(){
+        //     let arr = [1,2,3,4];
+        //     let obj ={
+        //         name:"aa",
+        //         // age:12
+        //     }
+        //     return arr;
+        // }   
+        // let {name:a,age:b=10} = foo();
+        // console.log(a,b);
+        
+        // let [a,b,c,d] = foo();
+        // console.log(a,b,c,d);
+
+
+            // 变量互换
+        // let a = 10;
+        // let b = 20;
+
+        // let temp = 0;
+        // temp = a;
+        // a = b;
+        // b = temp;
+
+        // [a,b] = [b,a];
+        // console.log(a,b);
+
+        // b = [a,a=b][0];
+        // console.log(a,b);
+            
+        let obj = '{"name":"aaa","age":"12"}'  //json
+        console.log(JSON.stringify(obj)); //变成字符串
+        
+        console.log(JSON.parse(obj)); //变成对象
+        
+    </script>
+</body>
+</html>

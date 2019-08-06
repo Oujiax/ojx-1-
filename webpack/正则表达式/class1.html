@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = "hello world"
+        let reg = /hello/;
+        let reg2 = new RegExp("hello")
+        console.log(reg.exec(str));
+        console.log(reg2.test(str));
+
+        // let reg = /c{1}/;
+        // let str = "cainiao"
+        // console.log(reg.exec(str));
+        
+        // let reg = /^c$/;  //匹配内容就为c的
+        // let str = "c"
+        // console.log(reg.exec(str));
+
+        // let reg = /./;
+        // let str = "cainiaocccc"
+        // console.log(reg.exec(str));
+
+        // let str = "hello world";
+        // let reg = /(?<a>hello) (?<b>world)/;
+        // let a = str.replace(reg,"$2")
+        
+        
+    </script>
+</body>
+</html>

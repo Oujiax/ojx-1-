@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var people = [];
+        var a = window.confirm("是否选择午餐？");
+        console.log(a);
+        if (a == true) {
+            var b =window.prompt("请输入进餐人数","");  //文本框
+            console.log(b);
+            for(var i=0;i<b;i++){ 
+                var who = window.prompt("第"+(i+1)+"个人叫什么","");
+                people.push(who);   //把名字加入到people[]数组中
+            }
+            for (var j = 0; j < b; j++) {
+                var lunch = chooselunch();
+                alert(people[j] + "吃"+lunch);
+            }
+            function chooselunch() {
+                var name = "";
+                var random = Math.random();
+                random *= 10;
+                random = Math.floor(random);
+                switch (random) {
+                    case 0: name = "宫保鸡丁"; break;
+                    case 1: name = "土豆丝"; break;
+                    case 2: name = "香辣肉丝"; break;
+                    case 3: name = "锅包肉"; break;
+                    case 4: name = "面条"; break;
+                    case 5: name = "馒头"; break;
+                    case 6: name = "包子"; break;
+                    case 7: name = "粥"; break;
+                    case 8: name = "凉菜"; break;
+                    default: name = "don't eat"; break;
+                }
+                return name;
+            }
+        }
+        //var arr = new Array(3,2,1);
+        // var arr = [3,2,1,"dd",true];
+        // arr[0] = "qq";
+        // arr[5] = "hello";
+        // arr.push("world!");  //把字符串加入到数组中
+        // console.log(arr.length);    //取到当前数组长度
+        // for(var i=0;i<arr.length;i++){
+        //     console.log(arr[i]);
+        // }
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <span>
+
+    </span>
+    <script>
+        // 第一题
+        // var a = window.prompt("请输入年龄");
+        // console.log(a);
+        // var n = 5;
+        // if(a<14){alert("儿童");}
+        // if(a>=14&&a<24){alert("青少年");}
+        // if(a>=24&&a<40){alert("青年");}
+        // if(a>=40&&a<60){alert("中年");}
+        // if(a>=60){alert("老年");}
+        
+        // // 第二题
+        // var week = window.prompt("请输入数字");
+        // week = parseInt(week);
+        // switch (week) {
+        //     case 0:week = alert("Sunday"); break;
+        //     case 1:week = alert("Monday"); break;
+        //     case 2:week = alert("Tuesday"); break;
+        //     case 3:week = alert("Wednesday"); break;
+        //     case 4:week = alert("Thursday"); break;
+        //     case 5:week = alert("Friday"); break;
+        //     case 6:week = alert("Saturday"); break;
+        //     default:week = alert("数字错误"); break;
+        // }
+        
+        // // 第三&四题
+        // var j = 1, s = 0;
+        // for(var i=1;i<=10;i++){
+        //     j *=i;
+        //     s +=j;
+        // }
+        // console.log(j);
+        // console.log(s);
+
+        // 第五题
+        // for(var i=1;i<=5;i++){
+        //     for(var j=1;j<=i;j++){
+        //         document.write(j);
+        //         document.write("&nbsp;");  //空格
+        //     }
+        //     document.write("<br/>")   //换行
+        // }
+
+        // 第六题    
+        for(var i=1;i<=5;i++){
+            for(var k=0;k<4-i;k++){
+                document.write("&nbsp;");
+            }
+             for(var j=1;j<=i;j++){
+                document.write("*");
+                document.write("&nbsp;");
+            }
+             document.write("<br/>")   //换行
+        }
+
+        // // 第七题
+        // for(var i=100;i<1000;i++){
+        //     if (i % 4 == 2 && i % 7 == 3 && i % 9 == 5) {
+        //         console.log(i);
+        //         break;  //只求出第一个数
+        //     }
+        // }
+
+        // //第八题
+        // for(var i=1000;i<10000;i++){
+        //     var A = Math.floor(i/1000);
+        //     var B = (Math.floor(i/100))%10;
+        //     var C = (Math.floor(i/10))%10;
+        //     if (i % 13 == 0 && A == B+C) {
+        //         console.log(i);
+                
+        //     }
+        // }
+
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .div1{
+            width: 200px;
+            height: 50px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1"></div>
+    <script>
+        var div1 = document.getElementsByClassName("div1")[0];
+        var timer = null;
+        //数字时定义0,字符串定义""
+        div1.onmouseover = function(){
+            var this1 = this;
+            timer = setInterval(function(){
+                //offsetHeight获取到的是数字，不用加单位
+                if(this1.offsetHeight > 400){
+                    clearInterval(timer);
+                }
+                else{
+                    this1.style.height = this1.offsetHeight + 10 + "px";
+                }    
+            },16)
+        }
+        div1.onmouseout = function(){
+            clearInterval(timer);
+            var this1 = this;
+            timer = setInterval(function(){
+                
+                if(this1.offsetHeight < 50){
+                    clearInterval(timer);
+                }else{
+                    this1.style.height = this1.offsetHeight - 10 + "px";
+                }
+            },16)
+        }
+        
+    </script>
+</body>
+</html>

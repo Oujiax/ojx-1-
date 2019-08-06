@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./jquery-3.4.1.js"></script>
+</head>
+<body>
+  <div >hello</div>
+  <input type="checkbox">
+  <button id="btn">add</button>
+  <button id="rbtn">remove</button>
+  <script>
+    $("div").attr("class","active");
+    $("div").prop("a","aaaaa")
+    console.log($('input'));
+    $("#btn").on("click",function(){
+      $("input").prop("checked",true)
+    })
+    $("#rbtn").on("click",function(){
+      $("input").prop("checked",false)
+    })
+  </script>
+</body>
+</html>

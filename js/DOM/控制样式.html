@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #box{
+      width: 200px;
+      height: 100px;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <div id="box"></div>
+  <!-- <div class="div1">12121</div> -->
+  
+  <script>
+    var oBox = document.getElementById("box");
+    // var aDiv = document.getElementsByClassName("div1")[0];
+    // console.log(oBox);
+    // console.log(aDiv);
+    oBox.onclick = function(){
+      oBox.style.width = 400+"px";
+      oBox.style.backgroundColor = 'blue';
+    }
+    // aDiv.onclick = function(){
+    //   console.log('div1');
+      
+    // }
+  </script>
+</body>
+</html>

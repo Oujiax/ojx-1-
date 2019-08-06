@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery-3.4.1.js"></script>
+    <style type="text/css">
+    body{
+      font-size:16px;
+    }
+    table{
+      border:1px solid black;
+      border-collapse:collapse;
+      width:400px;
+    }
+    table td,th{
+      width:50%;
+      border:1px solid black;
+      height:30px;
+    }
+    tbody th{
+      background-color:#abc;
+    }
+  </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>鼠标点击表格可编辑内容</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="parent" id="row_01">
+                <td>学号</td>
+                <td>姓名</td>
+            </tr>
+            <tr class=".editable">
+                <td>1</td>
+                <td>张珊</td>
+            </tr>
+            <tr class=".editable">
+                <td>2</td>
+                <td>李四</td>
+            </tr>
+            <tr class=".editable">
+                <td>3</td>
+                <td>王五</td>
+            </tr>
+            <tr class=".editable">
+                <td>4</td>
+                <td>找六</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        $(".editable").on("click", function () {
+            if ($(this).children().length == 0) {
+                var thisVal = $(this.text())
+                var newInp = $("<input type='text'>");
+                newInp.val(thisVal)
+                $(this).text("")
+                $(this).append(newInp)
+                newInp.focus()
+            }
+        })
+        $(".editable").focusout(function () {
+            var inpVal = $(this).find("input").val();
+            $(this).empty();
+            $(this).text(inpVal)
+        })
+        $(".editable").on("keydown", function (e) {
+            if (e.which == 13) {
+                $(this).trigger("focusout");
+            }
+        })
+    </script>
+</body>
+
+</html>

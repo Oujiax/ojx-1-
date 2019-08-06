@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        li{
+            list-style: none;
+        }
+        body{
+            background-color: #000;
+        }
+        .box{
+            width: 500px;
+            height: 195px;
+            margin: 0 auto;
+            position: relative;
+            border: 5px solid #fff;
+        }
+        .clearfix::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .img-bar li{
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+        .img-bar .active{
+            display: block;
+        }
+        .right-btn{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        .right-btn li,.left-btn li{
+            float: left;
+            width: 20px;
+            height: 20px;
+            background-color: #f90;
+            border-radius: 50%;
+            color: #fff;
+            text-align: center;
+            line-height: 20px;
+            font-size: 12px;
+            margin: 0 10px 10px 0;
+        }
+        .left-btn{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        .right-btn .active{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="img-bar">
+            <ul id="img-ul">
+                <li class="active"><img src="https://img.alicdn.com/tfs/TB1uSeycRKw3KVjSZTEXXcuRpXa-1570-610.jpg" alt="" width="500" height="195"></li>
+                <li><img src="https://gju4.alicdn.com/tps/i3/6000000006838/O1CN01R1w3gs20NqpfPqRPC_!!6000000006838-0-jupush.jpg_760x760Q90.jpg" alt="" width="500" height="195"></li>
+                <li><img src="https://gju1.alicdn.com/tps/i4/6000000000325/O1CN01ms4Bic1EGtFxVkRBP_!!6000000000325-0-jupush.jpg_760x760Q90.jpg" alt="" width="500" height="195"></li>
+                <li><img src="https://gju3.alicdn.com/tps/i1/6000000004371/O1CN01I1ETs51i9xjyAxVzo_!!6000000004371-0-jupush.jpg_760x760Q90.jpg" alt="" width="500" height="195"></li>
+                <li><img src="https://gw.alicdn.com/tfs/TB1etJBkhPI8KJjSspoXXX6MFXa-440-180.jpg_.webp" alt="" width="500" height="195"></li>
+            </ul>
+        </div>
+        <div class="left-btn">
+            <ul>
+                <li id="lt">&lt;</li>
+                <li id="gt">&gt;</li>
+            </ul>
+        </div>
+        <div class="right-btn">
+        <ul class="clearfix">
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+    </div>
+    <script>
+        var oBox = document.getElementsByClassName("box")[0];
+        var numBtn = document.getElementsByClassName("right-btn")[0].getElementsByTagName("li");
+        var aImg = document.getElementsByClassName("img-bar")[0].getElementsByTagName("li");
+        var leftBtn = document.getElementById("lt");
+        var rightBtn = document.getElementById("gt");
+        var oImgul = document.getElementById("img-ul");
+        var nowIndex = 0;
+        var timer = null;
+        function play(index){
+            if(index>4){
+                index = 0;
+            }
+            if(index<0){
+                index = 4;
+            }
+            for(var j=0;j<numBtn.length;j++){
+                    numBtn[j].classList.remove("active");
+                    aImg[j].classList.remove("active");
+                }
+            nowIndex = index;
+            aImg[index].classList.add("active");
+            numBtn[index].classList.add("active");
+        }
+        //下一张按钮
+        rightBtn.onclick = function(){
+            nowIndex++;
+            play(nowIndex);
+        } 
+        //上一张按钮
+        leftBtn.onclick = function(){
+            nowIndex--;
+            play(nowIndex);
+        }  
+        //数字按钮事件 
+        for(var i=0;i<numBtn.length;i++){
+            numBtn[i].index = i;
+            numBtn[i].onmouseover =function(){
+                play(this.index);
+            }
+        }
+        
+        //时间事件
+        function run() {
+            timer = setInterval(function () {
+                nowIndex++;
+                play(nowIndex);
+            }, 1000)
+        }
+        run();
+        //移入图片区域
+        oBox.onmouseover = function(){
+            clearInterval(timer);
+        }
+        //移出图片区域
+        oBox.onmouseout = function(){
+            run();
+        }
+    </script>
+</body>
+</html>

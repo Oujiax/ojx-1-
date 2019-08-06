@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1165175_u58wqdnyao.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        .site-topbar{
+            height: 40px;
+            background-color: #333;
+        }
+        .st-content{
+            width: 1226px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .st-content ul li{
+            float: left;
+            height: 40px;
+            line-height: 40px;
+            font-size: 12px;
+            color: #b0b0b0;
+        }
+        .st-content li a{
+            color: #b0b0b0;
+        }
+        .st-content li span{
+            margin: 0 8px;
+        }
+
+        .st-content .left{ 
+            height: 40px;
+        }
+        .st-content .right{
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .st-content .right a,.topbar-btn{
+            color: #b0b0b0;
+            font-size: 12px;
+        }
+        .topbar-btn,.topbar-cart{
+            float: left;
+            height: 40px;
+            line-height: 40px;
+        }
+        .topbar-cart{
+            background-color: #424242;
+            margin-left: 10px;
+            padding: 0 10px;
+            width: 120px;
+        }
+        .cart-menu{
+            width: 316px;
+            height: 40px;
+            box-shadow: 0 5px 10px rgba(0,0,0,.5);
+            position: absolute;
+            top: 40px;
+            right: 0;
+            text-align: center;
+            visibility: hidden;
+            transition: all .1s ease;
+        }
+        .topbar-cart:hover{
+            background-color: #fff;
+        }
+        .topbar-cart:hover .cart-menu{
+            height: 100px;
+            visibility: visible;
+        }
+        .topbar-cart:hover a{
+            color: #ff6700;
+        }
+        .st-content .right i{
+            padding-right: 5px;
+        }
+        .site-headerbar{
+            height: 100px;
+            position: relative;
+        }
+        .container{
+            width: 1226px;
+            height: 100px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .st-content .left a:hover{
+            color: #fff;
+        }
+        .down{
+            position: relative;
+            z-index: 10;
+        }
+        .down .drop-down{
+            position: absolute;
+            top: 30px;
+            left: -35px;
+            display: none;
+        }
+        .down .drop-down .dd-top{
+            height: 20px;
+            width: 20px;
+            background-color: #fff;
+            transform: rotate(45deg);
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+        }
+        .down .drop-down .dd-bottom{
+            width: 124px;
+            position: relative;
+            background-color: #fff;
+            top: -10px;
+            box-shadow: 0px 1px 5px rgba(0,0,0,.5);
+            text-align: center;
+        }
+        .down:hover .drop-down{
+            display: block;
+
+        }
+        .header-logo{
+            background-color: #ff6700;
+            height: 55px;
+            width: 55px;
+            position: absolute;
+            top: 22.5px;
+        }
+        .header-nav{
+            height: 100px;
+            width: 850px;
+            position: absolute;
+            left: 80px;
+        }
+        .header-nav ul li{
+            float: left;
+            margin: 0 12px;
+            font-size: 16px;
+            color: #333;
+            text-align: center;
+            line-height: 100px;
+            position: relative;
+        }
+        .header-search{
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="site-topbar">
+        <div class="st-content">
+            <div class="left">
+                <ul>
+                    <li><a href=" ">小米商城</a><span class="line">|</span></li>
+                    <li><a href=" ">MIUI</a><span class="line">|</span></li>
+                    <li><a href=" ">IoT</a><span class="line">|</span></li>
+                    <li><a href=" ">云服务</a><span class="line">|</span></li>
+                    <li><a href=" ">金融</a><span class="line">|</span></li>
+                    <li><a href=" ">有品</a><span class="line">|</span></li>
+                    <li><a href=" ">小爱开放平台</a><span class="line">|</span></li>
+                    <li><a href=" ">政企服务</a><span class="line">|</span></li>
+                    <li><a href=" ">资质证照</a><span class="line">|</span></li>
+                    <li><a href=" ">协议规则</a><span class="line">|</span></li>                    
+                    <li class="down"> 
+                        <a href=" ">下载APP</a><span class="line">|</span>     
+                        <div class="drop-down">
+                                <div class=dd-top></div>
+                                <div class="dd-bottom">
+                                    <img src="https://i1.mifile.cn/f/i/17/appdownload/download.png?1" alt="小米商城" width="90" height="90" style="padding-top:15px;margin:0 auto;display: block">
+                                    <span>小米商城APP</span>
+                                </div>
+                            </div> 
+                        </li>                                                                
+                    <li><a href=" ">select region</a></li>
+                </ul>
+            </div>
+                <div class="right">
+                    <div class="topbar-btn">
+                        <ul>
+                            <li><a href=""><i class="iconfont icon-userhart"></i>登录</a><span class="line">|</span></li>
+                            <li><a href=""><i class="iconfont icon-useradd"></i>注册</a></li>
+                        </ul>
+                    </div>
+                    <div class="topbar-cart">
+                            <a  href=""><i class="iconfont icon-car"></i>购物车(0)</a>
+                                <div class="cart-menu">
+                                    <span>购物车空！！！</span>
+                                </div>
+                        </div>
+                    </ul>
+                </div>
+        </div>
+    </div>
+    <div class="site-headerbar">
+        <div class="container">
+            <div class="header-logo">
+                <img src="https://s01.mifile.cn/i/mi-logo.png" alt="小米商城" width="55" height="55" style="display:block">
+            </div>
+            <div class="header-nav">
+                <ul>
+                    <li><a href=" ">小米手机</a></li>
+                    <li><a href=" ">红米</a></li>
+                    <li><a href=" ">电视</a></li>
+                    <li><a href=" ">笔记本</a></li>
+                    <li><a href=" ">家电</a></li>
+                    <li><a href=" ">新品</a></li>
+                    <li><a href=" ">路由器</a></li>
+                    <li><a href=" ">智能硬件</a></li>
+                    <li><a href=" ">服务</a></li>
+                    <li><a href=" ">社区</a></li>                    
+                </ul>
+            </div>
+            <div class="header-search"></div>
+            <div class=""></div>
+        </div>
+    </div>
+    <div class="row"></div>
+</body>
+</html>

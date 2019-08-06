@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- 可复用性，可传不同参数 -->
+        <aaa :str="msg"></aaa>
+        <aaa :str="msg1"></aaa>
+    </div>
+    <div id="app2">
+            <aaa :str="msg"></aaa>
+    </div>
+    <script>
+        Vue.component("aaa",{
+            template:`
+            <h1>hello {{str}}</h1>            
+            `,
+            props:["str"]  //定义变量
+        })
+        new Vue({
+            el:"#app",
+            data:{
+                msg:"world",
+                msg1:"fellow32"
+            }
+        })
+        new Vue({
+            el:"#app2",
+            data:{
+                msg:"abc",
+            }
+        })
+    </script>
+</body>
+</html>

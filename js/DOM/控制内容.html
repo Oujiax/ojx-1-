@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #box{
+      width: 200px;
+      height: 200px;
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <div id="box">
+  </div>
+  
+  <script>
+    var oBox = document.getElementById("box");
+    
+    oBox.onclick = function(){
+      // oBox.innerText = '<h1>hello world!</h1>'
+      oBox.innerHTML = '<h1>hello world!</h1>';
+    }
+    
+  </script>
+</body>
+</html>

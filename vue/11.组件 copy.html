@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+</head>
+<body>
+   <div id="app">
+    <bb :str="msg"></bb>
+   </div>
+   <div id="app2">
+       <bb :str="msg"></bb>
+   </div>
+   <script>
+       Vue.component("bb",{
+           template:'<h1>hello {{str}}</h1>',
+           props:["str"]
+       })
+       new Vue({
+           el:"#app",
+           data:{
+            msg:"world",
+           },
+       })
+       new Vue({
+           el:"#app2",
+           data:{
+               msg:"aaa",
+           }
+       })
+   </script>
+</body>
+</html>

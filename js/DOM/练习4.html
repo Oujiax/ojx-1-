@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .box{
+            width: 500px;
+            border: 1px solid #000;
+        }
+        #top{
+            height: 50px;
+            background: black;
+            
+        }
+        #top ul{
+            padding: 0;
+        }
+        #top ul li{
+            float: left;
+            list-style: none;
+            color: #b0b0b0;
+            height: 50px;
+            line-height: 50px;
+            padding: 0 20px;
+        }
+        #top ul .active{
+            background-color: #ddd;
+            color: #000;
+        }
+        #bottom ul{
+            display: none;
+        }
+        .box #bottom .active{
+            display: block;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+    <div id="top">
+        <ul class="box1">
+            <li>第一节课</li>
+            <li>第二节课</li>
+            <li>第三节课</li>
+        </ul>
+    </div>
+    <div id="bottom">
+    <ul class="box2">
+        <li>第一节课内容</li>
+        <li>第二节课内容</li>
+        <li>第三节课内容</li>
+    </ul>
+</div>
+</div>
+    <script>
+        var oBox1 = document.getElementsByClassName("box1")[0]
+        var Box1Li = oBox1.getElementsByTagName("li")
+        var oBox2 = document.getElementsByClassName("box2")[0]
+        var Box2Li = oBox2.getElementsByTagName("li")       
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">
+        <li>1</li>
+    </div>
+    <button id="btn">添加</button>
+    <script>
+        var oDiv1 = document.getElementById("div1");        
+        var oBtn = document.getElementById("btn")
+        var aLi = oDiv1.getElementsByTagName("li")   
+
+        oDiv1.onclick = function(e){
+            if(e.target.nodeName == "LI"){
+                console.log(e.target.innerText);
+            }           
+        }
+        oBtn.onclick = function(){
+            var oSpan = document.createElement("li");
+            var lastEl = oDiv1.lastElementChild.innerText;
+            oSpan.innerText = parseInt(lastEl) + 1;
+            oDiv1.appendChild(oSpan)
+        }                 
+    </script>
+</body>
+</html>

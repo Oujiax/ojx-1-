@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery-3.4.1.js"></script>
+    <style>
+        .mosk {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0, 0, 0, 0.3);
+        }
+    
+        .login {
+          width: 400px;
+          height: 200px;
+          background-color: #fff;
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+    
+        .header {
+          height: 30px;
+          background-color: #000;
+          color: #fff;
+          padding: 0 10px;
+        }
+    
+        .header span:last-child {
+          float: right;
+        }
+    
+        .container {
+          display: none;
+        }
+      </style>
+</head>
+<body>
+    <button id="btn">登录</button>
+    <div id="container"></div>
+    <script>
+        $.fn.extend({
+          fellow:function(){
+            $(this).html("butt")
+          }
+        })
+    </script>
+    
+</body> 
+</html>

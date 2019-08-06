@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- keyup -->
+        <input type="text" name="useername" v-model="msg" placeholder="请输入用户名">
+        <!-- blur -->
+        <input type="text" name="useername" v-model.lazy="msg" placeholder="请输入用户名">
+        <input type="text" name="useername" v-model,number="msg" placeholder="请输入用户名">   
+        <!-- 去除当前文本框的前后空格 -->
+        <input type="text" name="useername" v-model.trim="msg" placeholder="请输入用户名">
+        用户名：{{msg}}
+        <br/>
+        <input v-model="hobbyArr" type="checkbox" name="hobby" value="篮球">篮球
+        <input v-model="hobbyArr" type="checkbox" name="hobby" value="足球">足球
+        <input v-model="hobbyArr" type="checkbox" name="hobby" value="排球">排球
+        <input v-model="hobbyArr" type="checkbox" name="hobby" value="羽毛球">羽毛球
+        我的爱好：{{hobbyArr}}
+        <br/>
+        <input v-model="sex1" type="radio" name="sex" value="men">男
+        <input v-model="sex1" type="radio" name="sex" value="woman">女
+        性别：{{sex1}}
+        <br/>
+        <select name="" id="" v-model="school">
+            <option value="黑大">黑大</option>
+            <option value="农大">农大</option>
+            <option value="理工">理工</option>
+        </select>
+        学校：{{school}}
+    </div>
+    <script>
+        let vm = new Vue({
+            el:"#app",
+            data:{
+                msg:"ou",
+                hobbyArr:["羽毛球"],
+                sex1:"woman",
+                school:"黑大"
+            },
+        })
+    </script>
+</body>
+</html>

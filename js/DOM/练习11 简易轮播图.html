@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            height: 500px;
+              
+        }
+        .out-border{
+            /* margin:0 auto;  */
+            border: 1px solid black;
+            width: 500px;
+            height: 100px;
+            padding: 10px 0;
+            margin: 100px auto;
+            position: relative;
+            overflow: hidden;  
+        }
+        .clearfix{
+            width: 500px;
+            position: absolute;
+            left: 0;
+        }
+        .clearfix li{
+            list-style: none;
+            width: 90px;
+            height: 90px;
+            background: black;
+            float: left;
+            margin-right: 10px;
+            line-height: 100px;
+            color: aliceblue;
+            text-align: center;
+        }
+        .clearfix::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div class="out-border">
+            <ul id="list-content" class="clearfix">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        </div>
+    </div>
+    <script>
+        var oBox = document.getElementById("box");
+        var oLi = document.getElementById("list-content");
+        var timer = null;
+        oLi.innerHTML += oLi.innerHTML;
+        oLi.style.width = oLi.offsetWidth * 2 + "px";
+        timer = setInterval(function(){
+            if(oLi.offsetLeft ==-oLi.offsetWidth/2){
+                oLi.style.left = 0;
+            }else{
+                oLi.style.left = oLi.offsetLeft - 10 + "px";
+            }
+        },128)
+    </script>
+</body>
+</html>

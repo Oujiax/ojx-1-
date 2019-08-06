@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./jquery-3.4.1.js"></script>
+    <style>
+    div{
+        margin:10px;
+        height: 100px;
+        background-color: darkgray;
+        text-align: center;
+        color: aliceblue;
+        font-size: 30px;
+    }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <script>
+        var num = 0;
+        function foo(){
+            $("#div1").text(num++)
+        }
+        $("#div1").on("mousemove",foo)
+        var num2 = 0;
+        function foo2(){
+            $("#div2").text(num2++);
+        }
+        function debounce(fun,wait){
+            var timer = null;
+            return function(){
+                if(!timer){
+                clearTimeout(timer)
+                }
+                timer = setTimeout(function(){
+                    fun()
+                },wait)
+            }
+        }
+        $("#div2").on("mousemove",debounce(foo2,1000))
+        $("#div3").on("mousemove",function(){
+            
+        })
+    </script>
+</body>
+</html>

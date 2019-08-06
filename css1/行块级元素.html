@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    span{
+      width: 50px;
+      height: 50px;
+      /* margin-right: 100px;
+      margin-bottom: 100px; */
+    }
+    div{
+      width: 200px;
+      height: 200px;
+      /* margin-top:100px; */
+    }
+        span{
+            display: block; /*块阶*/
+        }
+        div{
+            display: inline;  /*行阶*/            
+        }
+      div,span{
+          background-color: blueviolet;
+          /*border-width: 1px;
+          border-style: solid;
+          border-color: blueviolet;*/
+          border: 1px solid #000;  /*  宽度  实线  边框颜色*/
+        }
+        span{
+            margin-right: 100px;  /*行级元素只有左右好使,高宽不好使*/
+
+        }
+    
+    </style>
+</head>
+<body>
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+</body>
+</html>

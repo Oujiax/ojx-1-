@@ -1,0 +1,85 @@
+#div1 { color: #ff00ff; }
+#div1 .p1 { border: 1px solid black; }
+#div1 .p1-span1 { color: #ff00ff; }
+#div1:hover { background-color: red; }
+
+#div2 { background-color: #ff00ff; }
+
+#div10 { background-image: url("css/xx.jpg"); }
+
+#div11 { color: #ff6666; border-color: #990000; background-color: rgba(0, 0, 0, 0.7); }
+
+#div12 { border: 1px solid black; }
+
+#div13 { color: red; }
+
+/* color is red */
+#div-str { color: red; }
+
+#div-1 { margin: 1px; }
+
+#div-2 { margin: 2px; }
+
+#div-3 { margin: 3px; }
+
+#div-4 { margin: 4px; }
+
+#div-5 { margin: 5px; }
+
+#div-6 { margin: 6px; }
+
+#div-7 { margin: 7px; }
+
+#div-8 { margin: 8px; }
+
+#div-9 { margin: 9px; }
+
+#div-10 { margin: 10px; }
+
+#div-1 { margin: 1px; }
+
+#div-2 { margin: 2px; }
+
+#div-3 { margin: 3px; }
+
+#div-4 { margin: 4px; }
+
+#div-5 { margin: 5px; }
+
+#div-6 { margin: 6px; }
+
+#div-7 { margin: 7px; }
+
+#div-8 { margin: 8px; }
+
+#div-9 { margin: 9px; }
+
+#span-a { color: red; }
+
+#span-b { color: red; }
+
+#span-c { color: red; }
+
+#span-d { color: red; }
+
+#p-1 { color: red; }
+
+#p-2 { color: red; }
+
+#p-3 { color: red; }
+
+#p-4 { color: red; }
+
+#p-5 { color: red; }
+
+#p-6 { color: red; }
+
+#p-7 { color: red; }
+
+#p-8 { color: red; }
+
+#p-9 { color: red; }
+
+#div23 { color: yellow; }
+
+/*# sourceMappingURL=index.css.map */

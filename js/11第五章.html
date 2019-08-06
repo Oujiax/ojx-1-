@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 第一题
+        // var x = window.prompt("请输入x的值");
+        // x = parseInt(x);
+        // var ；y = 4*x*x+3*x+2;
+        // alert(y);
+
+        // 第二题
+        // var x = window.prompt("请输入x的值");
+        // var y = window.prompt("请输入y的值");
+        // x = parseInt(x);
+        // y = parseInt(y);
+        // if(x>y){alert("最小值为 "+y);}
+        // else{alert("最小值为 "+x);}
+        // 第二种
+        // function Min(x,y){
+        //     var min = x<y?x:y;
+        //     console.log(min);
+        // }
+
+
+        // 第三题
+        // for(var j=0;j<6;j++){
+        //     for(var i=1;i<1000;i++){
+        //         if(i%3 ==0 && i%5 ==0 && i%7 ==0){
+        //             document.write(i);
+        //             document.write("&nbsp;");
+        //         }
+        //     }
+        //     document.write("<br/>");
+        // }
+
+        // 第四题
+            // var j=0;
+            // for(var i=100;i<1000;i++){
+            //     for(var a=2;a<i;a++){
+            //         if (i%a == 0) break; 
+            //         }
+            //         if(a == i){ 
+            //             document.write(i);
+            //             document.write("&nbsp;");
+            //             if(++j%6 == 0)
+            //                 document.write("<br/>");
+            //         }      
+            //     }
+
+
+            // 第五题
+            // var x = 1;
+            // var y = 1;
+            // for(var i =1;i <= 12;i++){
+            //     x *= i;
+            // }
+            // document.write(x);
+            // document.write("<br/>");
+            // for(var j =1;j <= 10;j++){
+            //     y *= j;
+            // }
+            // document.write(y);
+            // document.write("<br/>");
+            // document.write(x-y);
+            // document.write("<br/>");
+            // 第二种
+            // function factorial(n){
+            //     var key = 1;
+            //     if(n == 1){
+            //         return 1;
+            //     }
+            //     for(var i=1;i<=n;i++){
+            //         key *= i;
+            //     }
+            //     return key;
+            // }
+            // console.log(factorial(12)-factorial(10));
+            
+            // 第六题
+            for(var i = 1;i<=5;i++){
+                for(var k =0;k<5-i;k++){
+                    document.write("&nbsp;")
+                }
+                for(var j = 0;j<i;j++){
+                    document.write("&nbsp;")
+                }
+                document.write("<br/>")
+            }    
+            // 第七题（非递归）
+            // function Fibonacci1(n){
+            //     if(n<=2){
+            //         return 1;
+            //     }
+            //     var a =1,b = 1,temp = 0;
+            //     for(var i=3;i<=n;i++){
+            //         temp = a+ b;
+            //         a = b;
+            //         b = temp;     
+            //     }
+            //     return temp;
+            // }
+            // console.log(Fibonacci1(5));
+            // （递归）
+            // function Fibonacci2(n){
+            //     if(n<=2){
+            //         return 1;
+            //     }
+            //     return Fibonacci2(n-1)+Fibonacci2(n-2)
+            // }
+            // console.log(Fibonacci2(5));
+
+
+            // 第八题
+            // function foo(n){
+            //     var sum = 0;
+            //     var key = -1;
+                
+            //     for(var i=1;i<=n;i++){
+            //         if((i-1)%2 == 0){
+            //         key = 1;
+            //         }
+            //         sum += key*(1/(2*n-1));
+            //         key = -1;
+            //     }
+            //     return sum*4;
+            // }
+            // console.log(100);
+            // console.log(500);
+            // console.log(1000);
+            // console.log(10000);
+            
+
+            // 第九题
+            function foo() {
+                var win = false;
+                for (var i = 0; i < 3; i++) {
+                    var a = Math.random();
+                    a = Math.floor(a*9) + 1;
+                    console.log(a);
+                    if (a == 8) {
+                        win = true;
+                        break;
+                    }
+                }
+                return win;
+            }
+            var count = 0
+            while (true) {
+                count++;
+                if (foo()) {
+                    break;
+                }
+            }
+            console.log(count);
+            
+            
+            
+
+                
+                
+
+
+
+
+    
+    </script>
+</body>
+</html>

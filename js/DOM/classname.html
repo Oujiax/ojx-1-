@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #box{
+      width: 200px;
+      height: 200px;
+      background-color: yellow;
+    }
+    .active{
+      color: red;
+    }
+    .aa{
+      font-size: 30px;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>a</li>
+    <li>b</li>
+    <li class="aa">c</li>
+    <li>d</li>
+    <li>e</li>
+    <li>f</li>
+  </ul>
+  <script>
+    var aLi = document.getElementsByTagName('li');
+    for(var i=0;i<aLi.length;i++){
+      aLi[i].index = i;
+      aLi[i].onclick = function(){
+        // var thisClassName = this.className;
+        // this.className =thisClassName+ " active"
+        this.classList.add("active");
+        this.classList.remove("aa");
+      }
+    }
+  </script>
+  
+</body>
+</html>

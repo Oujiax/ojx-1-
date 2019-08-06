@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #box{
+      
+    }
+  </style>
+</head>
+<body>
+  <div id="box">hello</div>
+  <ul>
+    <li class="list">1</li>
+    <li class="list">2</li>
+    <li class="list">3</li>
+  </ul>
+  <script>
+    var oBox = document.getElementById("box");
+    oBox.innerText = "hello world!";
+
+    var aList = document.getElementsByClassName("list");
+    console.log(aList);
+
+    var aList = document.getElementsByTagName("li");
+    console.log(aList);
+    
+  </script>
+</body>
+</html>

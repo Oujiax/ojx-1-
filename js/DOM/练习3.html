@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <ul>
+        <li class="li" id="list">百度</li>
+        <li class="li1" id="list1">淘宝</li>
+        <li class="li2" id="list2">京东</li>
+    </ul>
+    <script>
+        var aList = document.getElementById("list");
+        aList.onclick = function(){
+            aList.className = "li active";
+            location.replace("http://www.baidu.com")
+        }
+        var aList = document.getElementById("list1");
+        aList.onclick = function(){
+            aList.className = "li1 active";
+            location.replace("http://www.taobao.com")
+        }
+        var aList = document.getElementById("list2");
+        aList.onclick = function(){
+            aList.className = "li2 active";
+            location.replace("http://www.jingdong.com")
+        } -->
+    <!-- </script> -->
+        <ul id="box">
+            <li id="li1" mysrc="http://www.baidu.com">百度</li>
+            <li id="li2" mysrc="http://www.taobao.com">淘宝</li>
+        </ul>
+    <script>
+       var oLi1 = document.getElementById("li1"); 
+       var oLi2 = document.getElementById("li2");
+       oLi1.onclick = function(){
+           var thisSrc = oLi1.getAttribute("mysrc");
+           location.replace(thisSrc);
+       }
+    </script>
+</body>
+</html>
