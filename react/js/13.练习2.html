@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="./babel.min.js"></script>
+    <script src="./react.development(1).js"></script>
+    <script src="./react-dom.development(1).js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+    class Todotable extends React.Component{
+            constructor(props){
+                super(props)
+            }
+            trClick(index){
+                this.props.checkList(index)
+            }
+            delList(index,event){
+                this.props.delHandle(index);
+                event.stopPropagation();
+            }
+            delCheck(){
+                this.props.delChecked();
+            }
+
+            render(){
+                let thisList = this.props.items;
+                let sum = 0;
+                console.log(thisList);
+                let tStr = thisList.map((item,index) =>{
+                    let style = null;
+                    
+                })
+                return(
+                    <div>
+                        <Todoform/>
+                        <Todotable/>
+                    </div>
+                )
+            }
+        }
+    class Todoform extends React.Component{
+            constructor(props){
+                super(props)
+            }
+            render(){
+                return(
+                    <div>
+                        <Todoform/>
+                        <Todotable/>
+                    </div>
+                )
+            }
+        }
+    class Todolist extends React.Component{
+            constructor(props){
+                super(props)
+            }
+            render(){
+                return(
+                    <div>
+                        <Todoform/>
+                        <Todotable items={dateList}/>
+                    </div>
+                )
+            }
+        }
+    ReactDOM.render(
+        <Todolist/>,
+        document.getElementById("root")
+    ) 
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./babel.min.js"></script>
+    <script src="./react.development(1).js"></script>
+    <script src="./react-dom.development(1).js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        class Foo extends React.Component{
+            constructor(props){
+                super(props)
+                this.state={
+                    count:[1,2,3,4,5,6,7,8]
+                }
+            }
+            render(){
+                let str=this.state.count.map((item,index,arr) =>{
+                    console.log(item,index);                   
+                
+                return(
+                    <div>
+                       <li key={index}>{item}</li>
+                    </div> 
+                )
+            })
+            return(
+                <div>
+                    <ul>
+                        {str}
+                    </ul> 
+                </div>   
+            )
+        }   
+        }
+        ReactDOM.render(
+            <Foo/>,
+            document.getElementById('root')
+        );
+</script>
+</body>
+</html>
